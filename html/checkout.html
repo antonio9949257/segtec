@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de Checkout</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+
+<section class="container my-5">
+    <h2 class="text-center mb-4">Formulario de Checkout</h2>
+    <div class="row">
+        
+        <div class="col-md-6">
+            <h4 class="mb-3">Información de Envío</h4>
+            <form>
+                <div class="mb-3">
+                    <label for="nombre" class="form-label">Nombre Completo</label>
+                    <input type="text" class="form-control" id="nombre" required>
+                </div>
+
+                <div class="mb-3">
+                    <label for="email" class="form-label">Correo Electrónico</label>
+                    <input type="email" class="form-control" id="email" required>
+                </div>
+
+                <div class="mb-3">
+                    <label for="direccion" class="form-label">Dirección</label>
+                    <input type="text" class="form-control" id="direccion" required>
+                </div>
+
+                <div class="mb-3">
+                    <label for="ciudad" class="form-label">Ciudad</label>
+                    <input type="text" class="form-control" id="ciudad" required>
+                </div>
+
+                <div class="mb-3">
+                    <label for="pais" class="form-label">País</label>
+                    <input type="text" class="form-control" id="pais" required>
+                </div>
+
+                <div class="mb-3">
+                    <label for="zip" class="form-label">Código Postal</label>
+                    <input type="text" class="form-control" id="zip" required>
+                </div>
+            </form>
+        </div>
+        
+        <div class="col-md-6">
+            <h4 class="mb-3">Método de Pago</h4>
+            <form>
+                <div class="mb-3">
+                    <label for="nombreTarjeta" class="form-label">Nombre en la Tarjeta</label>
+                    <input type="text" class="form-control" id="nombreTarjeta" required>
+                </div>
+
+                <div class="mb-3">
+                    <label for="numeroTarjeta" class="form-label">Número de la Tarjeta</label>
+                    <input type="text" class="form-control" id="numeroTarjeta" required>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-6 mb-3">
+                        <label for="expiracion" class="form-label">Fecha de Expiración</label>
+                        <input type="text" class="form-control" id="expiracion" placeholder="MM/AA" required>
+                    </div>
+
+                    <div class="col-md-6 mb-3">
+                        <label for="cvv" class="form-label">CVV</label>
+                        <input type="text" class="form-control" id="cvv" required>
+                    </div>
+                </div>
+
+                <div class="form-check mb-3">
+                    <input class="form-check-input" type="radio" name="metodoPago" id="credito" checked>
+                    <label class="form-check-label" for="credito">Tarjeta de Crédito</label>
+                </div>
+
+                <div class="form-check mb-3">
+                    <input class="form-check-input" type="radio" name="metodoPago" id="debito">
+                    <label class="form-check-label" for="debito">Tarjeta de Débito</label>
+                </div>
+            </form>
+        </div>
+        
+        <div class="col-12 mt-4">
+            <h4 class="mb-3">Resumen del Pedido</h4>
+            <ul class="list-group mb-3">
+                <li class="list-group-item d-flex justify-content-between">
+                    <div>
+                        <h6 class="my-0">Producto 1</h6>
+                        <small class="text-muted">Descripción breve</small>
+                    </div>
+                    <span class="text-muted">$12.00</span>
+                </li>
+                <li class="list-group-item d-flex justify-content-between">
+                    <div>
+                        <h6 class="my-0">Producto 2</h6>
+                        <small class="text-muted">Descripción breve</small>
+                    </div>
+                    <span class="text-muted">$8.00</span>
+                </li>
+                <li class="list-group-item d-flex justify-content-between">
+                    <span>Total (USD)</span>
+                    <strong>$20.00</strong>
+                </li>
+            </ul>
+            
+            <button class="btn btn-primary btn-lg w-100" type="submit">Confirmar Pedido</button>
+        </div>
+    </div>
+</section>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
